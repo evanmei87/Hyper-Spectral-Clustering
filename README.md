@@ -39,7 +39,11 @@ Here is an example:
 The number between the two underscores are all we really care about because that's how the code will organize this file directory to match the header with its raw file. There can not be more than two files with that specific number and both files can not have the same file extension. 
 
 ### Deployment
-From here we can run the code and it will automatically analyze all hyperspectral cubes in that raw file folder. Then an output text file will be returned with the 2d pixel coordinates and it's cluster number. We can visualize this output using a program like imageJ and clicking File -> import -> Text Image. 
+From here we can run the code and it will automatically analyze all hyperspectral cubes in that raw file folder. 
+
+To run the code, launch Jupyter Notebook and navigate to where you downloaded this repository and open CleanedHyperClustering. From there we can click Kernel -> Restart and Run All.
+
+Then an output text file will be returned with the 2d pixel coordinates and it's cluster number. We can visualize this output using a program like imageJ and clicking File -> import -> Text Image. 
 
 ## Author
 * **Evan Mei**
