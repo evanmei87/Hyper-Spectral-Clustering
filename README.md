@@ -36,7 +36,7 @@ Raw_someNumber_someLocation.hdr
 Here is an example:
 ![](https://github.com/evanmei87/Hyper-Spectral-Clustering/blob/master/ReadMeImages/files.JPG)
 
-The number between the two underscores are all we really care about because that's how the code will organize this file directory to match the header with its raw file. There can not be more than two files with that specific number and both files can not have the same file extension. 
+The number between the two underscores is all we really care about because that's how the code will organize this file directory to match the header with its raw file. There can not be more than two files with that specific number and both files can not have the same file extension. 
 
 ### Deployment
 From here we can run the code and it will automatically analyze all hyperspectral cubes in that raw file folder. Currently, the default number of clusters that will be created is 2, but we can change this by changing the k value in this line of code at the end of the CleanedHyperClustering notebook. Additionally change max_iter to increase the accuracy of the clustering but at the cost of extra runtime.
@@ -45,11 +45,11 @@ From here we can run the code and it will automatically analyze all hyperspectra
 clf = clusterMod.K_Means(k = 2, max_width = min(length, width), max_iter = 10)
 ```
 
-So far in my tests, 25 clusters yields a decent distribution of groups while also not taking an entire day to analyze. Typical runtime for 25 clusters is around 3 hours.
+So far in my tests, 25 clusters yields a decent distribution of groups while also not taking an entire day to analyze. Typical runtime for 25 clusters is around 3 hours. 200-300 iterations yields more defined groups.
 
 To run the code, launch Jupyter Notebook and navigate to where you downloaded this repository and open CleanedHyperClustering. From there we can click Kernel -> Restart and Run All.
 
-Then an output text file will be returned with the 2d pixel coordinates and it's cluster number. We can visualize this output using a program like imageJ and clicking File -> import -> Text Image. 
+An output text file with the name output(fileNumber).txt will be created with the 2d pixel coordinates and it's cluster number. We can visualize this output using a program like imageJ and clicking File -> import -> Text Image. 
 
 ### Future Updates
 Some time in the future I would like to classify these clusters with groundtruth to determine how accurate the clustering is. When compared to the NDVI approach of finding vegetation, this clustering approach was successfully able to identify the vegetation and put all those coordinates into one group. Here is an output image of a 25-group cluster where I highlighted the one group that identified vegetation.
