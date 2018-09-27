@@ -38,6 +38,8 @@ Here is an example:
 
 The number between the two underscores is all we really care about because that's how the code will organize this file directory to match the header with its raw file. There can not be more than two files with that specific number and both files can not have the same file extension. 
 
+Right now, there is one header file in this folder which needs to be removed.
+
 ### Deployment
 From here we can run the code and it will automatically analyze all hyperspectral cubes in that raw file folder. Currently, the default number of clusters that will be created is 2, but we can change this by changing the k value in this line of code at the end of the CleanedHyperClustering notebook. Additionally change max_iter to increase the accuracy of the clustering but at the cost of extra runtime.
 
